@@ -20,6 +20,8 @@ def preprocessamento(pergunta):
         respostas = pd.read_csv("respostasDireitoAmbiental.csv").dropna()
     elif pergunta == "O que é estatística":
         respostas = pd.read_csv("respostasEstatistica.csv").dropna()
+    elif pergunta == 'Objetivo da contabilidade':
+        respostas = pd.read_csv("objetivoContabilidade.csv").dropna()
 
     respostasSplit = []
 

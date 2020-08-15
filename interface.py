@@ -12,7 +12,7 @@ if algoritmos == "KNN":
 
 pergunta = st.sidebar.selectbox(
     "Escolha a pergunta",
-    ('O que é estatística', 'Principios do direito ambiental')
+    ('Principios do direito ambiental', 'O que é estatística', 'Objetivo da contabilidade')
 )
 
 if algoritmos == 'Redes neurais' or algoritmos == 'Reg. logística':
