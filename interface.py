@@ -15,6 +15,9 @@ pergunta = st.sidebar.selectbox(
     ('Principios do direito ambiental', 'O que é estatística', 'Objetivo da contabilidade')
 )
 
+if pergunta == 'Objetivo da contabilidade':
+    st.write('Temos poucas questões nessa base de dados, por isso sua taxa de acerto é menos que as outras')
+
 if algoritmos == 'Redes neurais' or algoritmos == 'Reg. logística':
     confiabilidade = st.sidebar.slider('Grau de confiabilidade', 50, 90, 50)
 
@@ -53,7 +56,10 @@ if btn:
         corr = MachineLearning.reglog(x, y, resposta, respostasTotais)
         if corr > confiabilidade / 100:
             st.write('Sua resposta está correta - REG. LOG')
+            st.write(f'Resposta do algoritmo = {corr} quanto mais próximo de 1 maior a chance de ser uma resposta correta e quanto mais próximo a 0 maior a chance de estar errada')
         elif corr < (100 - confiabilidade) / 100:
             st.write('Sua resposta esta errada - REG. LOG')
+            st.write(
+                f'Resposta do algoritmo = {corr} quanto mais próximo de 1 maior a chance de ser uma resposta correta e quanto mais próximo a 0 maior a chance de estar errada')
 
 
